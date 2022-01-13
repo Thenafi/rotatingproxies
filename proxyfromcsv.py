@@ -19,7 +19,7 @@ def extract(proxy):
     try:
         #change the url to https://httpbin.org/ip that doesnt block anything
         r = requests.get('https://httpbin.org/ip', headers=headers, proxies={'http' : proxy,'https': proxy}, timeout=2)
-        print(r.json(), ' | Works')
+        print(proxy)
     except:
         pass
     return proxy
